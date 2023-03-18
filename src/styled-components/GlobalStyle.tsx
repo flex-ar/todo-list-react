@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --BrightBlue: hsl(220, 98%, 61%);
-    --CheckBorder: radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    --CheckBackground: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+    --primary: hsl(220, 98%, 61%);
+    --checkBorder: radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --checkBackground: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --title: hsl(236, 33%, 92%);
   }
 
   * {
@@ -15,16 +15,15 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
-  html {
-    overflow-x: hidden;
-  }
 
   body {
-    background-color: ${({ theme }) => theme.colors.bgBody};
+    background-color: ${props => props.theme.colors.bgBody};
+    color: ${props => props.theme.colors.text};
+    font-size: 1.125rem;
     height: 100vh;
     line-height: 1.5;
     overflow-x: hidden;
-    padding: 32px;
+    padding: 2rem;
     width: 100vw;
   }
 `;
