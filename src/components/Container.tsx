@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { VStack } from '../styled-components/GlobalComponents';
 
 import { Header } from './Header';
-import { TodoApp } from './todo/TodoApp';
+import { TodoApp } from './TodoApp';
 
 const ContainerStyle = styled(VStack)`
   gap: 1.5rem;

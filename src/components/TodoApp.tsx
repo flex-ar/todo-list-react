@@ -1,12 +1,12 @@
 import { useReducer } from 'react';
 
-import TodoContext from '../../store/Todo/TodoContext';
-import { reducerTodo } from '../../store/Todo/reducerTodo';
-import { initialState } from '../../store/Todo/initialState';
+import TodoContext from '../store/TodoContext';
+import { reducerTodo } from '../store/reducerTodo';
+import { initialState } from '../store/initialState';
 
-import { Footer } from './Footer';
-import { TodoList } from './TodoList';
-import { TodoInput } from './TodoInput';
+import { Footer } from './todo/Footer';
+import { TodoList } from './todo/TodoList';
+import { TodoInput } from './todo/TodoInput';
 
 export const TodoApp = () => {
   const [todos, dispatch] = useReducer(reducerTodo, initialState());

@@ -1,6 +1,6 @@
-export interface Todo {
+export type Todo = {
   text: string;
   id: string;
   completed: boolean;
   isHidden?: boolean;
-}
+};

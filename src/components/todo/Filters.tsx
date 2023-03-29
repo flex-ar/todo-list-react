@@ -1,12 +1,8 @@
 import { useContext, useState } from 'react';
 import styled, { DefaultTheme } from 'styled-components';
 
-import {
-  filterActive,
-  filterAll,
-  filterCompleted,
-} from '../../store/Todo/actions';
-import TodoContext from '../../store/Todo/TodoContext';
+import { filterActive, filterAll, filterCompleted } from '../../store/actions';
+import TodoContext from '../../store/TodoContext';
 import { FiltersContainer } from '../../styled-components/Footer';
 
 interface Props {

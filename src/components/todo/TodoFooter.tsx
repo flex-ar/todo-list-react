@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 
-import { deleteCompletedTodos } from '../../store/Todo/actions';
-import TodoContext from '../../store/Todo/TodoContext';
+import { deleteCompletedTodos } from '../../store/actions';
+import TodoContext from '../../store/TodoContext';
 import { FiltersDesktop } from '../../styled-components/Footer';
 import { Box } from '../../styled-components/GlobalComponents';
 

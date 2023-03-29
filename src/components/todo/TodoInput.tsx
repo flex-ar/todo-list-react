@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { Circle, Input } from '../../styled-components/todo/Input';
 import { TodoContainer } from '../../styled-components/todo/Todo';
-import TodoContext from '../../store/Todo/TodoContext';
-import { addTodo } from '../../store/Todo/actions';
+import TodoContext from '../../store/TodoContext';
+import { addTodo } from '../../store/actions';
 
 const Container = styled(TodoContainer)`
   box-shadow: ${props => props.theme.shadow};

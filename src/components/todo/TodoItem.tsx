@@ -1,11 +1,12 @@
+import type { Todo } from '../../models/Todo';
+
 import { useContext } from 'react';
 import styled from 'styled-components';
 
 import CheckIcon from '../../assets/icons/CheckIcon';
 import { Divider } from '../../styled-components/GlobalComponents';
-import { Todo } from '../../models/Todo';
-import TodoContext from '../../store/Todo/TodoContext';
-import { completeTodo, deleteTodo } from '../../store/Todo/actions';
+import TodoContext from '../../store/TodoContext';
+import { completeTodo, deleteTodo } from '../../store/actions';
 
 import {
   Check,

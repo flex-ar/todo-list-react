@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import type { Theme } from '../themes';
 
-import { Theme } from '../themes';
+import { useState } from 'react';
 
 const getTheme = (): Theme =>
   localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';

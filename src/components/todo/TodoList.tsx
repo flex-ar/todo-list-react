@@ -2,9 +2,8 @@ import { useContext } from 'react';
 import { DropResult } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 
-import TodoContext from '../../store/Todo/TodoContext';
-import { reorderTodos } from '../../store/Todo/actions';
-import { reorder } from '../../utils/reorder';
+import TodoContext from '../../store/TodoContext';
+import { reorderTodos } from '../../store/actions';
 
 import { DragAndDrop } from './DragAndDrop';
 import { TodoFooter } from './TodoFooter';
@@ -22,9 +21,13 @@ export const TodoList = () => {
   const onDragEnd = ({ source, destination }: DropResult) => {
     if (!destination) return;
     if (source.index === destination.index) return;
-    const result = reorder(todos, source.index, destination.index);
 
-    dispatch(reorderTodos(result));
+    dispatch(
+      reorderTodos({
+        startIndex: source.index,
+        endIndex: destination.index,
+      })
+    );
   };
 
   return (
